@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Color Change</title>
+</head>
+<body>
+
+<button id="colorButton" onclick="changeColor()">Click me!</button>
+
+<script>
+    function changeColor() {
+        const button = document.getElementById("colorButton");
+        button.style.backgroundColor = button.style.backgroundColor === "blue" ? "green" : "blue";
+    }
+</script>
+
+</body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Alert</title>
+</head>
+<body>
+
+<button onclick="showGreeting()">Show Greeting</button>
+
+<script>
+    function showGreeting() {
+        const hours = new Date().getHours();
+        let greeting;
+
+        if (hours < 12) {
+            greeting = "Good Morning!";
+        } else if (hours < 18) {
+            greeting = "Good Afternoon!";
+        } else {
+            greeting = "Good Evening!";
+        }
+
+        alert(greeting);
+    }
+</script>
+
+</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+</head>
+<body>
+
+<h2>Basic Calculator</h2>
+<label for="num1">Number 1:</label>
+<input type="number" id="num1">
+<br>
+<label for="num2">Number 2:</label>
+<input type="number" id="num2">
+<br>
+<button onclick="calculate()">Add Numbers</button>
+<p id="result"></p>
+
+<script>
+    function calculate() {
+        const num1 = parseFloat(document.getElementById('num1').value);
+        const num2 = parseFloat(document.getElementById('num2').value);
+        const result = num1 + num2;
+        document.getElementById('result').innerText = "Result: " + result;
+    }
+</script>
+
+</body>
+</html>
+
+</html>
